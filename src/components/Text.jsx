@@ -8,7 +8,7 @@ export const Text = ({
   as: Component = 'p',
   ...props 
 }) => {
-  // Классы размеров
+  
   const sizeClasses = {
     small: 'text-sm',
     medium: 'text-base',
@@ -16,7 +16,7 @@ export const Text = ({
     xlarge: 'text-xl md:text-2xl'
   }
   
-  // Классы цветов
+  
   const colorClasses = {
     primary: 'text-white',
     secondary: 'text-gray-400',

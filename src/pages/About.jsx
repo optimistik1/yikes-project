@@ -6,7 +6,7 @@ import { Text } from '../components/Text';
 import { FaHeadset, FaCommentAlt, FaPlus, FaStar, FaTimes } from 'react-icons/fa';
 
 export const About = () => {
-  // Состояния для формы контактов
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,7 +14,7 @@ export const About = () => {
     message: ''
   });
 
-  // Состояния для отзывов
+  
   const [reviews, setReviews] = useState([]);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [newReview, setNewReview] = useState({
@@ -23,7 +23,7 @@ export const About = () => {
     rating: '5'
   });
 
-  // Загрузка отзывов из localStorage
+  
   useEffect(() => {
     const savedReviews = localStorage.getItem('reviews');
     if (savedReviews) {
@@ -31,12 +31,12 @@ export const About = () => {
     }
   }, []);
 
-  // Сохранение отзывов в localStorage
+  
   useEffect(() => {
     localStorage.setItem('reviews', JSON.stringify(reviews));
   }, [reviews]);
 
-  // Обработчики для формы контактов
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
@@ -48,7 +48,7 @@ export const About = () => {
     });
   };
 
-  // Обработчики для отзывов
+  
   const handleReviewSubmit = (e) => {
     e.preventDefault();
     if (newReview.nickname && newReview.text) {
@@ -83,7 +83,7 @@ export const About = () => {
     }));
   };
 
-  // Рендер звезд рейтинга
+  
   const renderRatingStars = (rating) => {
     return (
       <div className="flex items-center">
@@ -107,7 +107,7 @@ export const About = () => {
           </Text>
         </div>
         
-        {/* Секция отзывов */}
+        {}
         <div className="mb-12">
           <div className="flex justify-between items-center mb-6">
             <Text as="h2" size="large" className="font-bold">
@@ -142,7 +142,7 @@ export const About = () => {
           </div>
         </div>
 
-        {/* Модальное окно добавления отзыва */}
+        {}
         {isReviewModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
             <div className="bg-gray-800 rounded-lg p-6 max-w-md w-full border border-[#00FF00]">
@@ -210,7 +210,7 @@ export const About = () => {
           </div>
         )}
 
-        {/* Форма обратной связи */}
+        {}
         <div className="mt-12">
           <Text as="h2" size="large" className="mb-4 font-bold">
             Свяжитесь с нами
